@@ -1,4 +1,4 @@
-package com.example.composeapplication
+package ru.test.compose2
 
 import android.os.Bundle
 import android.widget.Toast
@@ -21,7 +21,6 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AccountBox
 import androidx.compose.material.icons.rounded.AccountCircle
 import androidx.compose.material.icons.rounded.Delete
 import androidx.compose.material.ripple.rememberRipple
@@ -63,13 +62,13 @@ data class User(
 fun createUserList(): List<User> {
     val faker = Faker.instance(Random(0))
     val images = mutableListOf(
-        "https://unsplash.com/photos/a-woman-in-a-red-dress-sitting-next-to-a-pool-i6veDaLBK0w",
-        "https://unsplash.com/photos/woman-on-street-LpZvsGynEho",
-        "https://unsplash.com/photos/a-woman-in-a-bodysuit-standing-on-a-beach-HSHXznrNAMc",
-        "https://unsplash.com/photos/woman-in-black-brassiere-and-panty-set-Y9ksK2aKzkU",
-        "https://unsplash.com/photos/woman-in-blue-and-brown-jacket-zar90MHyWYc",
-        "https://unsplash.com/photos/smiling-woman-wearing-white-and-black-pinstriped-collared-top-QXevDflbl8A",
-        "https://unsplash.com/photos/woman-in-gray-long-sleeved-top-taking-selfie-DOphQiBRe5U"
+        "https://i.pinimg.com/originals/e2/ec/31/e2ec318333608d137b47ce8f2a83eed0.jpg",
+        "https://i.pinimg.com/736x/e8/8e/4f/e88e4fcb0aabdab3afe9718dd4c62534.jpg",
+        "https://i.pinimg.com/550x/83/44/56/834456a24fd26a5a7bbf7774166ca26c.jpg",
+        "https://img.goodfon.com/original/3888x2592/1/e4/devushka-krasivaya-grud-poza.jpg",
+        "https://www.nastol.com.ua/download.php?img=201402/1680x1050/nastol.com.ua-87675.jpg",
+        "https://avatars.mds.yandex.net/i?id=a936766ecc1ae1869678f0b9a80f501b_l-5478998-images-thumbs&n=13",
+        "https://avatars.mds.yandex.net/i?id=bc08e900c32f534cfcf3adedb323c43f_l-5235401-images-thumbs&n=13"
 
     )
     val list = List(100) { index ->
@@ -84,18 +83,18 @@ fun createUserList(): List<User> {
     return list
 }
 
-class MainActivity : ComponentActivity() {
+class ListActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            AppScreen()
+            ListScreen()
         }
     }
 }
 
 @Preview(showSystemUi = true)
 @Composable
-fun AppScreen() {
+fun ListScreen() {
     var userList by remember {
         mutableStateOf(createUserList())
     }

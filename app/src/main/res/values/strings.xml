@@ -3,4 +3,7 @@
     <string name="material_mail_icon">Material mail Icon</string>
     <string name="girl_anime">Voodo detective</string>
     <string name="voodo_detective">Voodo detective</string>
+    <string name="user_photo">User photo</string>
+    <string name="delete_user">Delete user</string>
+    <string name="clicked_on">Clicked on %1$s</string>
 </resources>
