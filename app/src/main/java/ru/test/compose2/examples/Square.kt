@@ -11,7 +11,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 
 @Composable
-@Preview
+@Preview(showSystemUi = true)
 fun Square(
     modifier: Modifier = Modifier,
     color: Color = Color.Red,
