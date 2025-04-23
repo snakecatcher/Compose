@@ -39,12 +39,16 @@ import coil.compose.AsyncImage
 import coil.compose.SubcomposeAsyncImage
 import ru.test.compose2.base.Container
 import ru.test.compose2.examples.Ex01Default
+import ru.test.compose2.examples.Ex02Center
+import ru.test.compose2.examples.Ex03Center
+import ru.test.compose2.examples.Ex04LinksToParent
+import ru.test.compose2.examples.Ex05AbsoluteLinksToParent
 
 class ConstraintActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            Ex01Default()
+            Ex05AbsoluteLinksToParent()
         }
     }
 }

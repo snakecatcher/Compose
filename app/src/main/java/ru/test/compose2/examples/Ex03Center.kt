@@ -11,11 +11,17 @@ import androidx.constraintlayout.compose.ConstraintLayout
 
 @Composable
 @Preview(showSystemUi = true)
-fun Ex02Center(){
+fun Ex03Center(){
     ConstraintLayout(Modifier.fillMaxSize()){
         Square(
             modifier = Modifier.constrainAs(createRef()){
-                centerTo(parent)
+                centerVerticallyTo(parent)
+            }
+        )
+        Square(
+            color = Color.Blue,
+            modifier = Modifier.constrainAs(createRef()){
+                centerHorizontallyTo(parent)
             }
         )
     }
